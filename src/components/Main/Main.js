@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Activity from "../Activity/Activity";
+import ActivityDetails from "../ActivityDetails/ActivityDetails";
 
 const Main = () => {
   // ---------------------> Activity state <--------------------------
@@ -14,11 +15,15 @@ const Main = () => {
     <div className="grid grid-cols-12 mt-16">
       {/* ----------> Activities<---------- */}
       <div className="bg-slate-100 col-span-9 grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-5 p-20">
+        {/* ---------->Activity<---------  */}
         {activites.map((activity) => (
           <Activity activity={activity}></Activity>
         ))}
       </div>
-      <div className="border border-red-400 col-span-3">Calcultion</div>
+      {/* --------------->Activity Info<---------- */}
+      <div className="col-span-3">
+        <ActivityDetails></ActivityDetails>
+      </div>
     </div>
   );
 };
