@@ -2,7 +2,7 @@ import React from "react";
 import img from "../../images/dabasish.jpg";
 const ActivityDetails = () => {
   return (
-    <div className="p-5">
+    <div className="p-5 flex flex-col gap-5 fixed">
       {/* First component container */}
       <div className="flex flex-col gap-3">
         {/* Name & Location */}
@@ -37,8 +37,8 @@ const ActivityDetails = () => {
         </div>
 
         <div>
-          <h1>Add A Break</h1>
-          <div className="bg-slate-100 py-5 px-2 rounded-xl flex justify-around">
+          <h1 className="text-base font-bold mb-2">Add A Break</h1>
+          <div className="bg-slate-100 py-4 px-2 rounded-xl flex justify-around">
             <button className="rounded-full bg-white p-2 font-medium">
               20s
             </button>
@@ -58,8 +58,24 @@ const ActivityDetails = () => {
         </div>
       </div>
       {/* first component end */}
-      <div></div>
-      <div></div>
+
+      {/* exercise details  */}
+      <div className="flex flex-col gap-3">
+        <h1 className="text-base font-bold">Exercise Details</h1>
+        <div className="bg-slate-100 p-4 rounded-xl flex justify-between items-center">
+          <h4 className="text-base font-bold">Exercise time</h4>
+          <p className="text-gray-400">200 seconds</p>
+        </div>
+        <div className="bg-slate-100 p-4 rounded-xl flex justify-between items-center">
+          <h4 className="text-base font-bold">Break time</h4>
+          <p className="text-gray-400">200 seconds</p>
+        </div>
+      </div>
+      <div>
+        <button className="w-full bg-primary text-white py-2 rounded-md">
+          Activity Completed
+        </button>
+      </div>
     </div>
   );
 };
