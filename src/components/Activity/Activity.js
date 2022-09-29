@@ -16,9 +16,7 @@ const Activity = ({
         <div className="card-actions justify-center">
           <button
             onClick={(e) => {
-              e.target.style.backgroundColor = "green";
-              e.target.innerText = "Added";
-              handleAddToList(timeRequired);
+              handleAddToList(timeRequired, e);
             }}
             className="w-full bg-primary text-white py-2 rounded-md"
           >

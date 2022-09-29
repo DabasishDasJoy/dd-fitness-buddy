@@ -1,6 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import img from "../../images/dabasish.jpg";
 const ActivityDetails = ({ exerciseTime }) => {
+  // ------------Add to break state ------
+  const [breaks, setBreaks] = useState(0);
+
+  // -------------Henlde Add Break -----------
+  const handleAddBreak = (e) => {
+    console.log(e.target.innerText);
+    setBreaks(e.target.innerText);
+    e.target.style.backgroundColor = "blue";
+    e.target.style.color = "white";
+  };
+
   return (
     <div className="p-5 flex flex-col gap-5 fixed">
       {/* First component container */}
@@ -39,19 +50,34 @@ const ActivityDetails = ({ exerciseTime }) => {
         <div>
           <h1 className="text-base font-bold mb-2">Add A Break</h1>
           <div className="bg-slate-100 py-4 px-2 rounded-xl flex justify-around">
-            <button className="rounded-full bg-white p-2 font-medium">
+            <button
+              onClick={(e) => handleAddBreak(e)}
+              className="rounded-full bg-white p-2 font-medium"
+            >
               20s
             </button>
-            <button className="rounded-full bg-white p-2 font-medium">
+            <button
+              onClick={(e) => handleAddBreak(e)}
+              className="rounded-full bg-white p-2 font-medium"
+            >
               10s
             </button>
-            <button className="rounded-full bg-white p-2 font-medium">
+            <button
+              onClick={(e) => handleAddBreak(e)}
+              className="rounded-full bg-white p-2 font-medium"
+            >
               30s
             </button>
-            <button className="rounded-full bg-white p-2 font-medium">
+            <button
+              onClick={(e) => handleAddBreak(e)}
+              className="rounded-full bg-white p-2 font-medium"
+            >
               40s
             </button>
-            <button className="rounded-full bg-white p-2 font-medium">
+            <button
+              onClick={(e) => handleAddBreak(e)}
+              className="rounded-full bg-white p-2 font-medium"
+            >
               50s
             </button>
           </div>
@@ -68,7 +94,7 @@ const ActivityDetails = ({ exerciseTime }) => {
         </div>
         <div className="bg-slate-100 p-4 rounded-xl flex justify-between items-center">
           <h4 className="text-base font-bold">Break time</h4>
-          <p className="text-gray-400">200 seconds</p>
+          <p className="text-gray-400">{breaks} seconds</p>
         </div>
       </div>
       <div>
