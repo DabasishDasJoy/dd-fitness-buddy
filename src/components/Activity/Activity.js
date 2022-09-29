@@ -1,7 +1,6 @@
 import React from "react";
 
 const Activity = ({ activity: { img, name, timeRequired, description } }) => {
-  console.log("🚀 ~ file: Activity.js ~ line 4 ~ Activity ~ activity", img);
   return (
     <div className="card card-compact bg-base-100 shadow-xl">
       <figure>
