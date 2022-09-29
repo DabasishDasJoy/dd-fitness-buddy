@@ -15,7 +15,11 @@ const Activity = ({
         <p>Time required: {timeRequired} mins</p>
         <div className="card-actions justify-center">
           <button
-            onClick={() => handleAddToList(timeRequired)}
+            onClick={(e) => {
+              e.target.style.backgroundColor = "green";
+              e.target.innerText = "Added";
+              handleAddToList(timeRequired);
+            }}
             className="w-full bg-primary text-white py-2 rounded-md"
           >
             Add to List

@@ -1,11 +1,6 @@
 import React from "react";
 import img from "../../images/dabasish.jpg";
 const ActivityDetails = ({ exerciseTime }) => {
-  console.log(
-    "🚀 ~ file: ActivityDetails.js ~ line 4 ~ ActivityDetails ~ exerciseTime",
-    exerciseTime
-  );
-
   return (
     <div className="p-5 flex flex-col gap-5 fixed">
       {/* First component container */}
@@ -69,7 +64,7 @@ const ActivityDetails = ({ exerciseTime }) => {
         <h1 className="text-base font-bold">Exercise Details</h1>
         <div className="bg-slate-100 p-4 rounded-xl flex justify-between items-center">
           <h4 className="text-base font-bold">Exercise time</h4>
-          <p className="text-gray-400">{exerciseTime}</p>
+          <p className="text-gray-400">{exerciseTime} Minutes</p>
         </div>
         <div className="bg-slate-100 p-4 rounded-xl flex justify-between items-center">
           <h4 className="text-base font-bold">Break time</h4>
