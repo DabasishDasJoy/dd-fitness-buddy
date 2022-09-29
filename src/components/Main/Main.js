@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Activity from "../Activity/Activity";
-import ActivityDetails from "../ActivityDetails/ActivityDetails";
+import ActivitiDetails from "../ActivityDetails/ActivityDetails";
 
 const Main = () => {
   // ---------------------> Activity state <--------------------------
@@ -22,7 +22,7 @@ const Main = () => {
       </div>
       {/* --------------->Activity Info<---------- */}
       <div className="col-span-3">
-        <ActivityDetails></ActivityDetails>
+        <ActivitiDetails></ActivitiDetails>
       </div>
     </div>
   );
