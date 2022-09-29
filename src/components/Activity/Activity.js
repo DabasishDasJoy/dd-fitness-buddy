@@ -12,7 +12,7 @@ const Activity = ({
   return (
     <div className="card card-compact bg-base-100 shadow-xl">
       <figure>
-        <img src={img} alt="Shoes" className="w-full h-[200px]" />
+        <img src={img} alt="Shoes" className="w-full md:h-[200px] h-[400px]" />
       </figure>
       <div className="card-body">
         <h2 className="card-title">{name}</h2>

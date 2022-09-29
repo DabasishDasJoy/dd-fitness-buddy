@@ -6,13 +6,13 @@ import img from "../../images/dabasish.jpg";
 const ActivityDetails = ({ handleAddBreak, breakTime, exerciseTime }) => {
   const notify = () => toast("Congrats! You have completed!");
   return (
-    <div className="p-5 flex flex-col gap-5 fixed">
+    <div className="lg:p-5 md:p-16 sm:p-5 flex flex-col gap-5 lg:fixed">
       {/* First component container */}
       <div className="flex flex-col gap-3">
         {/* Name & Location */}
-        <div className="flex">
+        <div className="flex sm:gap-10">
           <img src={img} alt="" className="rounded-2xl w-1/6" />
-          <div className="m-auto">
+          <div className="md:m-auto sm:flex sm:flex-col sm:justify-center">
             <h3 className="text-base font-bold">Dabasish Das Joy</h3>
             <p className="text-sm text-gray-400">Chattogram, Bangladesh</p>
           </div>

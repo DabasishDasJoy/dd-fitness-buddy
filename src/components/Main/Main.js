@@ -44,10 +44,10 @@ const Main = () => {
   }, [activites]);
 
   return (
-    <div className="grid grid-cols-12 mt-16">
+    <div className="grid lg:grid-cols-12 grid-cols-1 mt-16">
       {/* ----------> Activities<---------- */}
-      <div className="col-span-9 bg-slate-100">
-        <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-5 p-20">
+      <div className="lg:col-span-9 col-span-full bg-slate-100 lg:order-none order-2">
+        <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6 lg:p-20 md:p-10 p-5">
           {/* ---------->Activity<---------  */}
           {activites.map((activity) => (
             <Activity
@@ -61,7 +61,7 @@ const Main = () => {
       </div>
 
       {/* --------------->Activity Info<---------- */}
-      <div className="col-span-3">
+      <div className="md:col-span-3 lg:order-none order-1">
         <ActivitiDetails
           handleAddBreak={handleAddBreak}
           breakTime={breakTime}
