@@ -46,17 +46,20 @@ const Main = () => {
   return (
     <div className="grid grid-cols-12 mt-16">
       {/* ----------> Activities<---------- */}
-      <div className="bg-slate-100 col-span-9 grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-5 p-20">
-        {/* ---------->Activity<---------  */}
-        {activites.map((activity) => (
-          <Activity
-            activity={activity}
-            key={activity.id}
-            handleAddToList={handleAddToList}
-          ></Activity>
-        ))}
+      <div className="col-span-9 bg-slate-100">
+        <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-5 p-20">
+          {/* ---------->Activity<---------  */}
+          {activites.map((activity) => (
+            <Activity
+              activity={activity}
+              key={activity.id}
+              handleAddToList={handleAddToList}
+            ></Activity>
+          ))}
+        </div>
         <Blog></Blog>
       </div>
+
       {/* --------------->Activity Info<---------- */}
       <div className="col-span-3">
         <ActivitiDetails
