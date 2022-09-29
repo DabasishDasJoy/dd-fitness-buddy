@@ -1,6 +1,9 @@
 import React from "react";
 
-const Activity = ({ activity: { img, name, timeRequired, description } }) => {
+const Activity = ({
+  activity: { img, name, timeRequired, description },
+  handleAddToList,
+}) => {
   return (
     <div className="card card-compact bg-base-100 shadow-xl">
       <figure>
@@ -11,7 +14,10 @@ const Activity = ({ activity: { img, name, timeRequired, description } }) => {
         <p>{description}</p>
         <p>Time required: {timeRequired} mins</p>
         <div className="card-actions justify-center">
-          <button className="w-full bg-primary text-white py-2 rounded-md">
+          <button
+            onClick={() => handleAddToList(timeRequired)}
+            className="w-full bg-primary text-white py-2 rounded-md"
+          >
             Add to List
           </button>
         </div>
