@@ -1,6 +1,10 @@
 import React from "react";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import img from "../../images/dabasish.jpg";
+
 const ActivityDetails = ({ handleAddBreak, breakTime, exerciseTime }) => {
+  const notify = () => toast("Congrats! You have completed!");
   return (
     <div className="p-5 flex flex-col gap-5 fixed">
       {/* First component container */}
@@ -93,9 +97,13 @@ const ActivityDetails = ({ handleAddBreak, breakTime, exerciseTime }) => {
         </div>
       </div>
       <div>
-        <button className="w-full bg-primary text-white py-2 rounded-md">
+        <button
+          onClick={notify}
+          className="w-full bg-primary text-white py-2 rounded-md"
+        >
           Activity Completed
         </button>
+        <ToastContainer position="bottom-left" />
       </div>
     </div>
   );
