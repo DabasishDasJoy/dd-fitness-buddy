@@ -1,18 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 import img from "../../images/dabasish.jpg";
-const ActivityDetails = ({ exerciseTime }) => {
-  // ------------Add to break state ------
-  const [breaks, setBreaks] = useState(0);
-
-  //Add to break color
-  const [btnClicked, setBtnClicked] = useState(false);
-
-  // -------------Henlde Add Break -----------
-  const handleAddBreak = (e) => {
-    setBreaks(e.target.value);
-    console.log(e.target.value);
-  };
-
+const ActivityDetails = ({ handleAddBreak, breakTime, exerciseTime }) => {
   return (
     <div className="p-5 flex flex-col gap-5 fixed">
       {/* First component container */}
@@ -101,7 +89,7 @@ const ActivityDetails = ({ exerciseTime }) => {
         </div>
         <div className="bg-slate-100 p-4 rounded-xl flex justify-between items-center">
           <h4 className="text-base font-bold">Break time</h4>
-          <p className="text-gray-400">{breaks} seconds</p>
+          <p className="text-gray-400">{breakTime} seconds</p>
         </div>
       </div>
       <div>
