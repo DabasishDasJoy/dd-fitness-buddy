@@ -1,3 +1,5 @@
+import { faLocationDot } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -14,7 +16,10 @@ const ActivityDetails = ({ handleAddBreak, breakTime, exerciseTime }) => {
           <img src={img} alt="" className="rounded-2xl w-1/6" />
           <div className="md:m-auto sm:flex sm:flex-col sm:justify-center">
             <h3 className="text-base font-bold">Dabasish Das Joy</h3>
-            <p className="text-sm text-gray-400">Chattogram, Bangladesh</p>
+            <p className="text-sm text-gray-400">
+              <FontAwesomeIcon icon={faLocationDot} className="mr-1" />
+              Chattogram, Bangladesh
+            </p>
           </div>
         </div>
 

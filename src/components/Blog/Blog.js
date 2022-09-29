@@ -4,8 +4,9 @@ const Blog = () => {
   return (
     <div className="col-span-full p-5 flex flex-col gap-5">
       <h1 className="font-bold text-center text-4xl">Blog</h1>
+      <hr className="w-[50%] m-auto border-[#20C997]" />
 
-      <article>
+      <article className="mt-3">
         <h3 className="font-bold text-2xl">How Does REACT Work?</h3>
         <p className="font-medium mt-2 pl-1">
           While building client-side apps, a team of Facebook developers
