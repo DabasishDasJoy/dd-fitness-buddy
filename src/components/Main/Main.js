@@ -18,9 +18,7 @@ const Main = () => {
   const [excerciseTime, setExerciseTime] = useState(0);
 
   // ---------------->Handle Add To List<----------------
-  const handleAddToList = (timeRequired, e) => {
-    e.target.style.backgroundColor = "green";
-    e.target.innerText = "Added";
+  const handleAddToList = (timeRequired) => {
     setExerciseTime(excerciseTime + timeRequired);
   };
 

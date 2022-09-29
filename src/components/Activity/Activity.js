@@ -1,9 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 
 const Activity = ({
   activity: { img, name, timeRequired, description },
   handleAddToList,
 }) => {
+  //Btn color change
+  const [btnColor, setBtnColor] = useState("blue");
+  //btn text state
+  const [btnAdded, setBtnAdded] = useState("Add to List");
+
   return (
     <div className="card card-compact bg-base-100 shadow-xl">
       <figure>
@@ -15,12 +20,17 @@ const Activity = ({
         <p>Time required: {timeRequired} mins</p>
         <div className="card-actions justify-center">
           <button
-            onClick={(e) => {
-              handleAddToList(timeRequired, e);
+            onClick={() => {
+              btnColor === "blue" ? setBtnColor("green") : setBtnColor("blue");
+              btnAdded === "Add to List"
+                ? setBtnAdded("Added")
+                : setBtnAdded("Add to List");
+              handleAddToList(timeRequired);
             }}
+            style={{ backgroundColor: btnColor }}
             className="w-full bg-primary text-white py-2 rounded-md"
           >
-            Add to List
+            {btnAdded}
           </button>
         </div>
       </div>
