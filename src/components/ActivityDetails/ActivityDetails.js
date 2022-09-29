@@ -4,12 +4,13 @@ const ActivityDetails = ({ exerciseTime }) => {
   // ------------Add to break state ------
   const [breaks, setBreaks] = useState(0);
 
+  //Add to break color
+  const [btnClicked, setBtnClicked] = useState(false);
+
   // -------------Henlde Add Break -----------
   const handleAddBreak = (e) => {
-    console.log(e.target.innerText);
-    setBreaks(e.target.innerText);
-    e.target.style.backgroundColor = "blue";
-    e.target.style.color = "white";
+    setBreaks(e.target.value);
+    console.log(e.target.value);
   };
 
   return (
@@ -52,30 +53,36 @@ const ActivityDetails = ({ exerciseTime }) => {
           <div className="bg-slate-100 py-4 px-2 rounded-xl flex justify-around">
             <button
               onClick={(e) => handleAddBreak(e)}
+              value={10}
+              className="rounded-full bg-white p-2 font-medium"
+            >
+              10s
+            </button>
+
+            <button
+              onClick={(e) => handleAddBreak(e)}
+              value={20}
               className="rounded-full bg-white p-2 font-medium"
             >
               20s
             </button>
             <button
               onClick={(e) => handleAddBreak(e)}
-              className="rounded-full bg-white p-2 font-medium"
-            >
-              10s
-            </button>
-            <button
-              onClick={(e) => handleAddBreak(e)}
+              value={30}
               className="rounded-full bg-white p-2 font-medium"
             >
               30s
             </button>
             <button
               onClick={(e) => handleAddBreak(e)}
+              value={40}
               className="rounded-full bg-white p-2 font-medium"
             >
               40s
             </button>
             <button
               onClick={(e) => handleAddBreak(e)}
+              value={50}
               className="rounded-full bg-white p-2 font-medium"
             >
               50s

@@ -21,10 +21,13 @@ const Activity = ({
         <div className="card-actions justify-center">
           <button
             onClick={() => {
-              btnColor === "blue" ? setBtnColor("green") : setBtnColor("blue");
-              btnAdded === "Add to List"
-                ? setBtnAdded("Added")
-                : setBtnAdded("Add to List");
+              if (btnColor === "blue") {
+                setBtnColor("green");
+              }
+              if (btnAdded === "Add to List") {
+                setBtnAdded("Added");
+              }
+
               handleAddToList(timeRequired);
             }}
             style={{ backgroundColor: btnColor }}
