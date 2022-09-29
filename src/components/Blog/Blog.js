@@ -36,24 +36,26 @@ const Blog = () => {
           Immutable.The state represents parts of an Application that can
           change. Each component can have its State. The state is Mutable and It
           is local to the component only.
-          <h5 className="font-bold">Props:</h5>
-          <ul className="list-disc pl-5">
-            <li>The Data is passed from one component to another.</li>
-            <li>It is Immutable (cannot be modified)</li>
-            <li>Props can be used with state and functional components.</li>
-            <li>Props are read-only.</li>
-          </ul>
-          <h5 className="font-bold">State:</h5>
-          <ul className="list-disc pl-5">
-            <li>The Data is passed within the component only.</li>
-            <li>It is Mutable ( can be modified).</li>
-            <li>
-              State can be used only with the state components/class component
-              (Before 16.0).
-            </li>
-            <li>State is both read and write.</li>
-          </ul>
         </p>
+        <br />
+        <span className="font-bold">Props:</span>
+        <ul className="list-disc pl-10 font-medium mt-2">
+          <li>The Data is passed from one component to another.</li>
+          <li>It is Immutable (cannot be modified)</li>
+          <li>Props can be used with state and functional components.</li>
+          <li>Props are read-only.</li>
+        </ul>
+        <br />
+        <span className="font-bold">State:</span>
+        <ul className="list-disc pl-10 font-medium mt-2">
+          <li>The Data is passed within the component only.</li>
+          <li>It is Mutable ( can be modified).</li>
+          <li>
+            State can be used only with the state components/class component
+            (Before 16.0).
+          </li>
+          <li>State is both read and write.</li>
+        </ul>
       </article>
       <article>
         <h3 className="font-bold text-2xl">Use of useEffect in REACT-</h3>
@@ -66,20 +68,20 @@ const Blog = () => {
           a server that has failed and instead of our post data, gives us a 500
           status code response. Virtually all applications rely on side effects
           to work in one way or another, aside from the simplest applications.
-          <br />
-          <br /> Common side effects include:
-          <ul className="list-disc pl-5">
-            <li>Making a request to an API for data from a backend server</li>
-            <li>
-              To interact with browser APIs (that is, to use document or window
-              directly)
-            </li>
-            <li>
-              Using unpredictable timing functions like setTimeout or
-              setInterval
-            </li>
-          </ul>
-          <br />
+          Common side effects include:
+        </p>
+        <ul className="list-disc pl-10 font-medium mt-2">
+          <li>Making a request to an API for data from a backend server</li>
+          <li>
+            To interact with browser APIs (that is, to use document or window
+            directly)
+          </li>
+          <li>
+            Using unpredictable timing functions like setTimeout or setInterval
+          </li>
+        </ul>
+
+        <p className="font-medium mt-2 pl-1">
           This is why useEffect exists: to provide a way to handle performing
           these side effects in what are otherwise pure React components. In
           short, useEffect is a tool that lets us interact with the outside

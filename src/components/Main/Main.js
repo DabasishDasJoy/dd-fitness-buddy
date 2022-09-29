@@ -17,10 +17,6 @@ const Main = () => {
 
   // ------------->Exercercise time state handle <-----------
   const [exerciseTime, setExerciseTime] = useState(0);
-  console.log(
-    "🚀 ~ file: Main.js ~ line 20 ~ Main ~ exerciseTime",
-    exerciseTime
-  );
 
   // ---------------->Handle Add To List<----------------
   const handleAddToList = (timeRequired) => {
