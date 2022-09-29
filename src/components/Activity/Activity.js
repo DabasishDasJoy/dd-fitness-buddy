@@ -5,12 +5,13 @@ const Activity = ({
   handleAddToList,
 }) => {
   //Btn color change
-  const [btnColor, setBtnColor] = useState("blue");
+  const [btnColor, setBtnColor] = useState("");
+
   //btn text state
   const [btnAdded, setBtnAdded] = useState("Add to List");
 
   return (
-    <div className="card card-compact bg-base-100 shadow-xl">
+    <div className="card card-compact bg-[#F8F9FA] shadow-2xl">
       <figure>
         <img src={img} alt="Shoes" className="w-full md:h-[200px] h-[400px]" />
       </figure>
@@ -20,18 +21,16 @@ const Activity = ({
         <p>Time required: {timeRequired} mins</p>
         <div className="card-actions justify-center">
           <button
-            onClick={() => {
-              if (btnColor === "blue") {
-                setBtnColor("green");
-              }
+            onClick={(e) => {
               if (btnAdded === "Add to List") {
                 setBtnAdded("Added");
+                e.target.style.backgroundColor = "#20C997";
+                e.target.style.color = "white";
               }
 
               handleAddToList(timeRequired);
             }}
-            style={{ backgroundColor: btnColor }}
-            className="w-full bg-primary text-white py-2 rounded-md"
+            className="w-full border-2 border-[#20C997] text-[#20C997] font-semibold text-lg py-1 rounded-lg mt-2 hover:bg-[#20C997] hover:text-white transition delay-75"
           >
             {btnAdded}
           </button>

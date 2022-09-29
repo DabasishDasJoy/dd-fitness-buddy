@@ -46,7 +46,7 @@ const Main = () => {
   return (
     <div className="grid lg:grid-cols-12 grid-cols-1 mt-16">
       {/* ----------> Activities<---------- */}
-      <div className="lg:col-span-9 col-span-full bg-slate-100 lg:order-none order-2">
+      <div className="lg:col-span-9 col-span-full bg-[#FFFFFF] lg:order-none order-2">
         <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6 lg:p-20 md:p-10 p-5">
           {/* ---------->Activity<---------  */}
           {activites.map((activity) => (
@@ -61,7 +61,7 @@ const Main = () => {
       </div>
 
       {/* --------------->Activity Info<---------- */}
-      <div className="md:col-span-3 lg:order-none order-1">
+      <div className="md:col-span-3 lg:order-none order-1 bg-[#F8F9FA]">
         <ActivitiDetails
           handleAddBreak={handleAddBreak}
           breakTime={breakTime}
